@@ -3,7 +3,7 @@ const mainRoutes = express.Router();
 
 const mainController = require('../controllers/mainController');
 
-mainRoutes.get('/test',mainController.testRoute)
+mainRoutes.post('/test',mainController.testRoute)
 
 
 

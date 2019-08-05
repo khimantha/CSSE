@@ -1,6 +1,6 @@
 
-const port = process.env.PORT || 3000;
-const mongoURL = 'mongodb://localhost/SPM'
+const port = process.env.PORT || 9000;
+const mongoURL = 'mongodb://localhost/CSSE'
 
 module.exports = {
     port:port,

@@ -8,6 +8,11 @@ const userSchema = mongoose.Schema({
     age:{
         type:Number,
         required:false
+    },
+    isDelete:{
+        type:Boolean,
+        require:false,
+        default:false
     }
 })
 

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="loginForm">
+
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Login</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input formControlName="email" type="email" placeholder="your@email.com" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input formControlName="password" type="password" placeholder="Password" ></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button (click) = "logForm()" size="large" type="submit" [disabled]="loginForm.invalid" expand="block">Login</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+
+
+  <ion-row>
+    <div></div>
+    <div class="ion-text-center ion-padding">
+      If you don't have an account, please <a routerLink='/register'>
+        register</a> first!
+    </div>
+  </ion-row>
+</ion-content>

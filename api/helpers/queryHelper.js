@@ -46,6 +46,21 @@ const findOneByID = function (model, id, callback) {
         }
     })
 }
+const findOneCriteria = function (model, criteria, callback) {
+    criteria.isDelete = false;
+
+    model.findOne(criteria, function (err, obj) {
+        if (err) {
+            callback(err, null);
+        } else {
+            returnObj = {};
+            returnObj.status = 200;
+            returnObj.result = obj;
+
+            callback(null, returnObj);
+        }
+    })
+}
 
 
 const deteteOneById = function (model, id, callback) {
@@ -81,5 +96,6 @@ module.exports = {
     getAllRecords: getAllRecords,
     findOneByID: findOneByID,
     deteteOneById: deteteOneById,
-    updateById: updateById
+    updateById: updateById,
+    findOneCriteria:findOneCriteria
 }
